@@ -42,6 +42,14 @@ list_t list_create()
 /* Delete the list and all internal nodes */
 void list_delete(list_t list)
 {
+
+	struct node *temp = list->head; // Creat temporary node like head
+
+	while(temp != NULL){
+		temp = temp->prev; // Make temp point to the second node
+		free(head); // Free header node
+		head = temp; // Update the head pointer to the second node
+	}
 }
 /* Insert data in list at index */
 void list_insert(list_t list, int index, int data)
