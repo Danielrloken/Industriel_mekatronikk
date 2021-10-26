@@ -1,7 +1,7 @@
-#include <unistd.h>
+//#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <sys/times.h>
+//#include <sys/times.h>
 #include "linked_list.h"
 
 int main(int argc, char **argv)
