@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/daniel/C_programming/Industriel_mekatronikk/Assignment_1/Assignment_B'
+echo "clean, run, build, debuger"
+make: Leaving directory '/home/daniel/C_programming/Industriel_mekatronikk/Assignment_1/Assignment_B'
+ 
