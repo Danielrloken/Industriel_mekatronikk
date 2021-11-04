@@ -11,7 +11,7 @@ void allocate(int value)
 
 int main()
 {
-    while (1)
+    while (1) //run this function indefinetely
 
     {
         allocate(69);

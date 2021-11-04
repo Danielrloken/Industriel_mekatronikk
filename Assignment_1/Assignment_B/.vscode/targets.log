@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Nov  1 18:13:04 2021
+# Make data base, printed on Thu Nov  4 12:15:01 2021
 
 # Variables
 
@@ -49,7 +49,7 @@ SNAP_DATA = /var/snap/code/78
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:30849
+JOURNAL_STREAM = 8:30441
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -75,7 +75,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 _ = /snap/code/78/usr/share/code/code
 # environment
-MANAGERPID = 985
+MANAGERPID = 972
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -91,7 +91,7 @@ PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/daniel-VirtualBox:@/tmp/.ICE-unix/1274,unix/daniel-VirtualBox:/tmp/.ICE-unix/1274
+SESSION_MANAGER = local/daniel-VirtualBox:@/tmp/.ICE-unix/1261,unix/daniel-VirtualBox:/tmp/.ICE-unix/1261
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -109,7 +109,7 @@ DISABLE_WAYLAND = 1
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=679777b8-c87c-4d0f-b6a7-99d8ab375a32&iid=679777b8-c87c-4d0f-b6a7-99d8ab375a32&sid=679777b8-c87c-4d0f-b6a7-99d8ab375a32","uploadToServer":true}
 # environment
-INVOCATION_ID = fca790f9eaf04084993a08f5dd390dd4
+INVOCATION_ID = d149b03312eb4412bbfa9a450d473744
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/78/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
@@ -121,7 +121,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 2117
+GIO_LAUNCHED_DESKTOP_FILE_PID = 1781
 # automatic
 %F = $(notdir $%)
 # environment
@@ -135,7 +135,7 @@ PWD = /home/daniel/C_programming/Industriel_mekatronikk/Assignment_1/Assignment_
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1209
+SSH_AGENT_PID = 1199
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -187,7 +187,7 @@ SHLVL = 0
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-0416d664-eea5-412a-9323-4bca6aa4d982.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-6e1028db-6b99-4ae5-86fd-1e78d13aa3a2.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -271,7 +271,7 @@ LC_ADDRESS = es_ES.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 2217
+VSCODE_PID = 2242
 # variable set hash-table stats:
 # Load=131/1024=13%, Rehash=0, Collisions=24/159=15%
 
@@ -282,9 +282,9 @@ VSCODE_PID = 2217
 
 # Directories
 
-# . (device 2053, inode 141764): 9 files, no impossibilities.
+# . (device 2053, inode 141764): 8 files, no impossibilities.
 
-# 9 files, no impossibilities in 1 directories.
+# 8 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -375,12 +375,12 @@ debuger:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 18 / storage = 163 B / avg = 9 B
-# current buf: size = 8162 B / used = 163 B / count = 18 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 17 / storage = 151 B / avg = 8 B
+# current buf: size = 8162 B / used = 151 B / count = 17 / avg = 8 B
 
-# strcache performance: lookups = 29 / hit rate = 37%
+# strcache performance: lookups = 28 / hit rate = 39%
 # hash-table stats:
-# Load=18/8192=0%, Rehash=0, Collisions=1/29=3%
-# Finished Make data base on Mon Nov  1 18:13:04 2021
+# Load=17/8192=0%, Rehash=0, Collisions=1/28=4%
+# Finished Make data base on Thu Nov  4 12:15:01 2021
 
  

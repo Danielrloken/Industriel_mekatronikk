@@ -28,6 +28,12 @@ list_t list_create()
 	struct node *new_head; // Declare pointer to new_head of type node
 	struct node *new_tail; // Declare pointer to new_tail of type node
 
+	list = (struct list *)malloc(sizeof(struct list)); // dynamically allocate memory with same size as node with data type "struct node" of the pointer
+	if (list == NULL)
+	{
+		printf("Error. Allocation was unsuccessful. \n");
+	}
+
 	new_head = (struct node *)malloc(sizeof(struct node)); // dynamically allocate memory with same size as node with data type "struct node" of the pointer
 	if (new_head == NULL)
 	{
@@ -46,6 +52,7 @@ list_t list_create()
 	
 	new_tail->prev = new_head;
 	new_tail->data = 0;
+	new_tail->next = NULL;
 
 	//struct list list; /* Declare list of type list */
 	/* list specification */
@@ -59,7 +66,7 @@ list_t list_create()
 void list_delete(list_t list)
 {
 
-	struct node *temp = list->head; // Creat temporary node like head
+	struct node *temp = list->head;// Creat temporary node like head
 
 	while (temp != NULL)
 	{
@@ -67,6 +74,10 @@ void list_delete(list_t list)
 		free(list->head);  // Free header node
 		list->head = temp; // Update the head pointer to the second node
 	}
+	if (list != NULL)
+	{
+		free(list);
+	}	
 }
 /* Insert data in list at index */
 void list_insert(list_t list, int index, int data)
@@ -147,6 +158,11 @@ long list_sum(list_t list)
 		temp = temp->next; // Change pointer to next node
 	}
 	return sum;
+	if (temp != NULL)
+	{
+		free(temp);
+	}
+	
 }
 /* Get data at index */
 int list_get(list_t list, int index)
@@ -158,6 +174,10 @@ int list_get(list_t list, int index)
 		temp = temp->next; // Change pointer to next node
 	}
 	return temp->data;
+	if (temp != NULL)
+	{
+		free(temp);
+	}
 }
 /* Extract data at index */
 int list_extract(list_t list, int index)
@@ -176,4 +196,8 @@ int list_extract(list_t list, int index)
 	free(temp->next);
 	temp->next = next_next;
 	return ret_val;
+	if (temp != NULL)
+	{
+		free(temp);
+	}
 }
