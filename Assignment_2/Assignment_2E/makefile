@@ -5,7 +5,7 @@ build:
 run:
 	./a.out
 clean:
-	rm run
+	rm a.out
 
 
 
