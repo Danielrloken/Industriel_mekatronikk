@@ -110,7 +110,7 @@ int __cdecl main(int argc, char **argv)
 
         iResult = recv(ConnectSocket, recvbuf, recvbuflen, 0);
         if ( iResult > 0 )
-            printf("Bytes received: %d\n", iResult);
+            printf("Bytes received: %d\njavel: %s\n", iResult, recvbuf);
         else if ( iResult == 0 )
             printf("Connection closed\n");
         else
