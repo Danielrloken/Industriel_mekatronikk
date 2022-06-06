@@ -4,35 +4,49 @@
 #include <unistd.h>
 
 sem_t mutex;
-
-void *thread(void *arg)
+int var1 = 0;
+int var2 = 0;
+int running = 1;
+void *thread1(void *arg)
 {
     //wait
-    sem_wait(&mutex);
-    for (int i = 1; i <= 4; i++)
+    
+    while (running)
     {
-        printf("Thread number %d \n", i);
-
+        sem_wait(&mutex);
+        var1 = var1 + 1;
+        var2 = var1;
+        sem_post(&mutex);
         usleep(100000);
     }
-    sem_post(&mutex);
+    
 }
 
+void *thread2(void *arg)
+{
+    //wait
+    
+    for (int i = 1; i <= 20; i++)
+    {
+        sem_wait(&mutex);
+        printf("Number 1 is %d number 2 is %d  \n", var1, var2);
+        sem_post(&mutex);
+        usleep(100000);
+
+    }
+    
+    running = 0;
+}
 int main()
 {
-    sem_init(&mutex, 0, 3);
-    pthread_t t1, t2, t3, t4, t5;
-    pthread_create(&t1, NULL, thread, NULL);
-    pthread_create(&t2, NULL, thread, NULL);
-    pthread_create(&t3, NULL, thread, NULL);
-    pthread_create(&t4, NULL, thread, NULL);
-    pthread_create(&t5, NULL, thread, NULL);
+    sem_init(&mutex, 0, 1); 
+    pthread_t t1, t2;
+    pthread_create(&t1, NULL, thread1, NULL);
+    pthread_create(&t2, NULL, thread2, NULL);
 
     pthread_join(t1, NULL);
     pthread_join(t2, NULL);
-    pthread_join(t3, NULL);
-    pthread_join(t4, NULL);
-    pthread_join(t5, NULL);
+
 
     sem_destroy(&mutex);
     return 0;

@@ -30,13 +30,13 @@ int main()
     for (int i = 0; i < NUM_THREADS; i++)
     {
         printf("Thread %d: \n",i+1);
-        rc= pthread_create(&threads[i], NULL, increment, (void *)i); // Create thread with  pointer variable id=&threads[i] and the function to be executed is increment
+        rc= pthread_create(&threads[i], NULL, increment, NULL); // Create thread with  pointer variable id=&threads[i] and the function to be executed is increment (void *)i
         if (rc)
         {
             printf("Error:unable to create thread, %d\n", rc);
             exit(-1);
         }
-        pthread_join(threads[i], (void**) &res); // join thread and return pointer top opintervariable res 
+        pthread_join(threads[i], (void**) &res); // join thread and return pointer to pointer variable res 
         printf("global count: %d \n local count: %d \n\n", global_count, *res);
         free(res); //free allocated memory
     }
